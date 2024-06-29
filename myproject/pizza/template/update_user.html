@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Profile</title>
+    <style>
+  
+
+
+        body{
+            background-color: rgb(11, 17, 17);
+            color: aliceblue;
+        }
+        div{
+            padding: 10px ;
+            margin: 10px;
+            height: auto;
+            width: 50%;
+            
+        }
+        button {
+            background-color:  rgb(11, 17, 17);
+           
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+          
+            border-radius: 10% / 50%;
+            cursor: pointer;
+            width: 25%;
+            border-color: aliceblue;
+            color: white;
+            font-size: 18px;
+            
+          
+           
+            transition: background-color 0.3s ease;
+          }
+          
+          button:hover {
+            opacity: 0.8;
+           
+          }
+         
+    </style>
+</head>
+<body>
+  
+    <div >
+        <fieldset>
+    <legend><h1>Update Profile</h1></legend>
+    <form id="updateForm" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+    </form>
+</fieldset>
+</div>
+</body>
+</html>
